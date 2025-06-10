@@ -623,51 +623,6 @@
 
     
 
-    <script>
-        // Live sensor data fluctuation
-        function toggleDropdown() {
-  const menu = document.getElementById("dropdownMenu");
-  menu.style.display = menu.style.display === "block" ? "none" : "block";
-}
-
-function signOut() {
-  alert("Signed out.");
-  window.location.href = "login.html"; // or your actual login page
-}
-
-document.addEventListener("click", function(event) {
-  const isDropdown = event.target.closest(".manager-dropdown");
-  if (!isDropdown) {
-    document.getElementById("dropdownMenu").style.display = "none";
-  }
-});
-
-        function updateSensorData() {
-            document.getElementById("temp").textContent = Math.floor(Math.random() * 10) + 175;
-      document.getElementById("co2").textContent = Math.floor(Math.random() * 50) + 350;
-      document.getElementById("NO2").textContent = Math.floor(Math.random() * 50) + 80;
-      document.getElementById("pm25").textContent = Math.floor(Math.random() * 20) + 50;
-      document.getElementById("pressure").textContent = Math.floor(Math.random() * 5) + 12;
-      document.getElementById("flowrate").textContent = Math.floor(Math.random() * 5) + 15;
-        }
-
-        // Update sensor data every 2 seconds
-        setInterval(updateSensorData, 2000);
-
-        // Animate bars randomly
-        function animateBars() {
-            const bars = document.querySelectorAll('.bar');
-            bars.forEach(bar => {
-                const height = 15 + Math.random() * 45;
-                bar.style.height = height + 'px';
-            });
-        }
-
-        setInterval(animateBars, 3000);
-
-        // Initial call
-        updateSensorData();
-        animateBars();
-    </script>
+    
 </body>
 </html>
